@@ -1,24 +1,18 @@
-def div(a,b):
-    assert (isinstance(a,int) or isinstance(a,float)) ,"argargument should be either int or float"
-    assert(isinstance(a,int) or isinstance(a,float)),"argument should be either int or float"   
-    
-    assert(b!=0),"division by zero is not defined"
-    return a/b
-try:
-    print(div(3,0))
-except Exception as ob:
-    print(ob)
-try:
-    print(div(20,3))
-except Exception as ob:
-    print(ob)
-try:
-    print(div(100,20))
-except Exception as ob:
-    print(ob)
-try:
-    print(div("hello",4))
-except Exception as ob:
-    print(ob)    
-    
+class Dog:
+    price=400
+    def __init__(self,name,color):
+        self.name=name
         
+        self.color=color
+    def bark(self):
+        print("woof")
+        print(self.name,"has",self.price,"and in",self.color)
+if __name__=="__main__":
+    pet1=Dog("tommy","brown",300)
+    pet2=Dog("sheru","white")
+    pet1.bark()
+    pet2.bark()
+    print(pet1.price)
+    print(pet2.price)
+    print(Dog.price)
+    Dog('abc','blue').bark()

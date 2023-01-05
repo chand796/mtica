@@ -1,20 +1,23 @@
-#num1=int(input())
-#if num1%2==0:
- #   print(num1,'is even')
-#if num%2==1:
-    #print(num1,'is odd')
-#print("we learnt if keyword")
-
-
-def checkeven():
-    num1=int(input())
-    if num1%2==0:
-        print(num1, 'is even')
-    return None
-def checkodd():
-    num1=int(input())
-    if num1%2==1:
-        print(num1, 'is odd')
-    return None
-checkeven()
-checkodd()
+class Animal:
+    def __init__(self,name,color):
+        self.name=name
+        self.color=color
+class Cat(Animal):
+    def mew(self):
+        print("cat meows")
+class Dog(Animal):
+    def bark(self):
+        print("woof")
+if __name__=="__main__":
+    print(__name__)
+    pet1=Dog("tommy","brown")
+    pet2=Cat("lucky","white")
+    pet1.bark()
+    pet2.mew()
+    print(pet1.name)
+    print(pet2.name)
+    print(pet1.color)
+    print(pet2.color)
+    
+    
+        
