@@ -1,16 +1,17 @@
-class Cat:
-    def __init__(self,color,legs):
-        self.color=color
-        self.legs=legs
-    def __str__(self):
-        temp=("cat is"+self.color+"and"+str(self.legs))
-        return temp
-if __name__=="__main__":
-    pet1=Cat("ginger",4)
-    print(pet1.legs)
-    print(pet1.color)
-    print(pet1)
-    pet2=Cat("black",3)
-    print(pet2.legs)
-    print(pet2.color)
-    print(pet2)
+def findLCM(n1,n2):
+    if n1<10 or n2<0:
+        return "INVALID"
+    if n1<n2:
+        n1,n2=n2,n1
+    i=n2
+    while True:
+        if i%n1==0 and i%2==0:
+            return i
+        else:
+                i+=1
+    return None
+
+print("enter two num")
+a=int(input())
+b=int(input())
+print(findLCM(a,b))

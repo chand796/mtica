@@ -1,18 +1,19 @@
-class Wolf:
-    price=500
-    def __init__ (self,name,color):
-        self.name=name
-        self.color=color
-    def bark(self):
-        print("grr...")
-class Dog(Wolf):
-    def bark1(self):
-        print("woof")
-if __name__== "__main__":
-    pet1=Dog("tommy","brown")
-    pet1.bark()
-    pet1.bark()
-    print(pet1.name,"is of color",pet1.color)
-    
-    
-        
+from math import sqrt
+def checkprime(n):
+    if n==1 or n==2 or n==3:
+        return n
+    for i in range(2,int(sqrt(n))+1):
+        if n%i==0:
+            return None
+    return n
+def primefactor(n):
+    temp=[]
+    for i in range(1,n+1):
+        if n%i==0:
+            if checkprime(i):
+                temp.append(i)
+    return temp
+a=int(input())
+print(*primefactor(a))
+
+                
